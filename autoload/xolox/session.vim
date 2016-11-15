@@ -305,7 +305,7 @@ function! s:check_special_window(session)
   if exists('b:NERDTreeRoot')
     if !has_key(s:nerdtrees, bufnr('%'))
       let command = 'NERDTree'
-      let argument = b:NERDTreeRoot.path.str()
+      let argument = b:NERDTree.root.path.str()
       let s:nerdtrees[bufnr('%')] = 1
     else
       let command = 'NERDTreeMirror'
